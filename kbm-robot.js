@@ -230,7 +230,7 @@ function kbmRobot() {
                         ".jar. Expected Path: " + jarPath);
                 }
                 try {
-                    keyPresser = spawn("java", ["-jar", jarPath]);
+                    keyPresser = spawn("java", ["-jar", jarPath], {detached: true});
                     // keyPresser.stdout.on('data', function (data) {
                     //     console.log("buttonPresser.jar: " + data);
                     // });
