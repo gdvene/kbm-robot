@@ -238,6 +238,7 @@ function kbmRobot() {
                     throw new Error("ERR: kbm-robot couldn't start robot" + JRE_ver +
                         ".jar");
                 }
+                return keyPresser;
             } else {
                 throw new Error("ERR: kbm-robot robot" + JRE_ver +
                     ".jar already started.");
