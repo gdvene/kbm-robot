@@ -246,9 +246,7 @@ function kbmRobot() {
         },
         stopJar: function() {
             if (keyPresser) {
-                setTimeout(function() {
-                    keyPresser.kill("SIGINT");
-                }, 200);
+                keyPresser.kill("SIGINT");
             } else {
                 throw new Error("ERR: kbm-robot robot" + JRE_ver +
                         ".jar not started.");
